@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
+
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +29,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center sm:ml-0 ml-[-20px]">
-          <img
+          <Image
             src="/logo.svg"
             alt="Logo"
             width={isScrolled ? 200 : 270} // Zmenší logo při scrollování
